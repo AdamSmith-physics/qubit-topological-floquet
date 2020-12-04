@@ -2,7 +2,7 @@
     This code was written for qiskit version 0.19.6
     It may need updating for future versions of qiskit
 
-    If you use any part of this code please cite [arXiv:2012.XXXXX]
+    If you use any part of this code please cite [arXiv:2012.01459]
 
     This file contains the following functions:
     
@@ -333,7 +333,7 @@ def create_omega_ramp(omega, times, ramp_time):
 def target_h(m, eta, omega1, omega2, phi1, phi2, times, max_drive_strength, ramp_time=None):
     """ The time dependent magnetic field corresponding to the Hamiltonian 
     in [PRX 7, 041008 (2017)] Eq.(28)
-    and [arXiv:2012.XXXXX] Eq.(7)
+    and [arXiv:2012.01459] Eq.(7)
 
     Includes a linear ramp of omega1 and omega2 to reduce transient effects from sudden quench
 
