@@ -1,5 +1,5 @@
 """
-Script used to plot inset of Fig.2 of [arXiv:2012.XXXXX]
+Script used to plot inset of Fig.2 of [arXiv:2012.01459]
 """
 
 import pickle
