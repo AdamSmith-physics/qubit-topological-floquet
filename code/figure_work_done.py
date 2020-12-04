@@ -1,5 +1,5 @@
 """
-Script used to plot Fig.1 and the subfigures in Fig.6 of [arXiv:2012.XXXXX]
+Script used to plot Fig.1 and the subfigures in Fig.6 of [arXiv:2012.01459]
 """
 
 import pickle
