@@ -1,8 +1,8 @@
 # qubit-topological-floquet
 
-Source data and python code for the paper "Topological two-dimensional Floquet lattice on a single superconducting qubit" [arXiv:2012.XXXXXX].
+Source data and python code for the paper "Topological two-dimensional Floquet lattice on a single superconducting qubit" [[arXiv:2012.01459](https://arxiv.org/abs/2012.01459)].
 
-If you use part of this set of data or python code for your own work, please cite [arXiv:2012.XXXXXX].
+If you use part of this set of data or python code for your own work, please cite [[arXiv:2012.01459](https://arxiv.org/abs/2012.01459)].
 
 ### code 
 
