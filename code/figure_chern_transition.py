@@ -1,5 +1,5 @@
 """
-Script used to plot Fig.2 of [arXiv:2012.01459]
+Script used to plot Fig.3 of [arXiv:2012.01459]
 """
 
 import pickle
@@ -132,8 +132,32 @@ for ii in range(len(filenames)):
     plt.errorbar(m_vals[ii], C_real, yerr=C_real_error, fmt='o', capsize=4, color=burnt_orange, label=label)
 
 
+##################################
+# Plot error model simulation 
+
+m_vals = np.array([0.05*x for x in range(81)])
+
+C_mean_array = []
+C_sd_array = []
+
+for m in m_vals:
+    
+    sim_data = load_obj_local(f'data/chern_error_sim_data/chern_error_simulation_data_800_omega_0-125_length_20_error_0-029_m_{m:.2f}'.replace('.','-'))
+
+    C_mean_array.append(sim_data['C_mean'])
+    C_sd_array.append(sim_data['C_sd'])
+
+C_mean_array = np.array(C_mean_array)
+C_sd_array = np.array(C_sd_array)
+
+plt.fill_between(m_vals, C_mean_array + C_sd_array, C_mean_array - C_sd_array,
+                 color = 0.6*nice_blue, alpha = 0.15, linewidth=0.0)
+
+
+
+
 plt.xlabel('$M$')
-plt.ylabel('frequency conversion')
+plt.ylabel('Chern number')
 plt.xlim([0,4])
 plt.ylim([-1.2,0.45])
 plt.legend(loc='upper left', ncol=3, prop={'size': 9},)

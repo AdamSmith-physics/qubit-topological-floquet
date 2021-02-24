@@ -143,7 +143,7 @@ for ii in range(len(omega_vals)):
         C_array_sample.append(C_sim_sample)
         C_error_array_sample.append(C_sim_error_sample)
 
-
+    
     #### save data to file ###########################
 
     path = "data/chern_sim_data/"
@@ -164,3 +164,4 @@ for ii in range(len(omega_vals)):
                 'C_errors sampled': C_error_array_sample  }
 
     saveDataToFile(data, path, filename)
+    

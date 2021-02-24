@@ -1,5 +1,5 @@
 """
-Script used to plot Fig.1 and the subfigures in Fig.6 of [arXiv:2012.01459]
+Script used to plot Fig.3 and the subfigures in Fig.9 of [arXiv:2012.01459]
 """
 
 import pickle
@@ -49,8 +49,8 @@ def load_obj_local(filename ):
 
 
 # load data for plotting
-path = 'data/data_2020-11-06'
-master_filename = 'target_h_t20_m3-2_omega0-125_90pc'
+path = 'data/data_2020-10-22'
+master_filename = 'target_h_t20_m1_omega0-125_90pc'
 
 real_data = load_obj_local(path + '/'+ master_filename + '_real')
 
@@ -59,7 +59,7 @@ dt = real_data['dt']
 hs = real_data['h']
 max_drive_strength = real_data['max_drive_strength']
 
-setupArmonkBackend_real(verbose = True)  # get parameters from device
+#setupArmonkBackend_real(verbose = True)  # get parameters from device
 
 m = real_data['h parameters']['m']
 eta = real_data['h parameters']['eta']
@@ -89,6 +89,7 @@ W1 = cumtrapz(E1_dot, x=t_sim*us, initial=0)
 plt.plot(t_sim, W1 /factor, '-', c = tuple(0.8*nice_blue))
 
 #### plot real 1 #########################
+
 
 correct_results_real = real_data['corrected results']
 pure_results_real = pure_results(correct_results_real)

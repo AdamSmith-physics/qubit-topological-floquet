@@ -62,8 +62,6 @@ dt = real_data['dt']
 hs = real_data['h']
 max_drive_strength = real_data['max_drive_strength']
 
-setupArmonkBackend_real(verbose = True)
-
 m = real_data['h parameters']['m']
 eta = real_data['h parameters']['eta']
 omega1 = real_data['h parameters']['omega1']

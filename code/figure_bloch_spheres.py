@@ -1,5 +1,5 @@
 """
-Script used to plot inset of Fig.2 of [arXiv:2012.01459]
+Script used to plot inset of Fig.3 of [arXiv:2012.01459]
 """
 
 import pickle
@@ -28,12 +28,14 @@ def load_obj_local(filename ):
         return pickle.load(f)
 
 
+burnt_orange = 1.1*np.array([191., 87., 0.]) / 256
 nice_blue = 0.9*np.array([94., 138., 210.]) / 256
 nice_green = 1.3*np.array([82., 112., 63.]) / 256
 white = np.array([1., 1., 1.])
 
-path = 'data/data_2020-10-27'
-master_filename = 'target_h_t20_m3_omega0-125_90pc'
+path = 'data/data_2020-10-22'
+master_filename = 'target_h_t20_m1_omega0-125_90pc'
+#master_filename = 'target_h_t20_m3_omega0-125_90pc'
 
 # load experimental data for plotting
 real_data = load_obj_local(path + '/'+ master_filename + '_real')
@@ -54,7 +56,7 @@ fig = plt.figure()
 ax = plt.axes(projection='3d')
 
 ax.plot_wireframe(bloch_x, bloch_y, bloch_z, color='k',alpha=0.2)
-ax.scatter(pure_results_real['x'], pure_results_real['y'], pure_results_real['z'], marker='.', c=nice_blue)
+ax.scatter(pure_results_real['x'], pure_results_real['y'], pure_results_real['z'], marker='.', c=burnt_orange)
 ax.text(-.2, 0, 1.25, r'$|0\rangle$')
 ax.text(-.2, 0, -1.65, r'$|1\rangle$')
 ax.set_box_aspect([1,1,1])
